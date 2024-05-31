@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sone</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        overflow: hidden;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    p {
+        font-size: 24px;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>Our website is under construction. Please check back later.</p>
+    </div>
+</body>
+</html>
