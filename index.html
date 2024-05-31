@@ -1,50 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sone</title>
-    <link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/attachments/1232606883471167569/1245985921761804318/Logo.png?ex=665abe51&is=66596cd1&hm=05746cbeafbf46209787379ecd3198a79fd4b60e915d9404209585533003e735&">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+<link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/attachments/1232606883471167569/1245985921761804318/Logo.png?ex=665abe51&is=66596cd1&hm=05746cbeafbf46209787379ecd3198a79fd4b60e915d9404209585533003e735&">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        overflow: hidden;
+    }
+
+    .loader-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        z-index: 999; /* Ensure the loader appears on top */
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite; /* Spin animation */
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    p {
+        font-size: 24px;
+        color: #666;
+    }
+
+    .logo {
+        width: 150px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #333;
+    }
+</style>
 </head>
 <body>
-    <div class="loader-wrapper">
+    <div class="loader-container">
         <div class="loader"></div>
     </div>
-
-    <div class="content">
-        <header>
-            <h1>Welcome to Sone</h1>
-        </header>
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Sone Offers Sleek And Fun Commands For Your Likings!</li>
-                <li>You Can Customize Sone Easily with commands.</li>
-            </ul>
-        </section>
-        <section class="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial">
-                <p>"Sone is amazing! It has made managing our Discord server so much easier."</p>
-                <p>- Nobody</p>
-            </div>
-            <div class="testimonial">
-                <p>"I love the sleek design and functionality of your bot. Keep up the great work!"</p>
-                <p>- Nobody</p>
-            </div>
-        </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Xero">
-                <input type="email" placeholder="sonedevelopments@gmail.com">
-                <textarea placeholder="Discord bots: the digital glue that binds communities, the silent helpers that make chaos coherent."></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+    <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/1232606883471167569/1245985921761804318/Logo.png?ex=665abe51&is=66596cd1&hm=05746cbeafbf46209787379ecd3198a79fd4b60e915d9404209585533003e735&" alt="Logo" class="logo">
+        <h1>Coming Soon</h1>
+        <p>Our website is under construction. Please check back later.</p>
+        <a href="https://dsc.gg/sonebot" class="button">Join our Discord Server</a>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
